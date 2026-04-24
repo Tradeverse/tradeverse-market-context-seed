@@ -1,0 +1,8 @@
+//@version=5
+indicator("Tradeverse News Seed Data", overlay=false)
+
+slot1 = "NONE"
+slot2 = "NONE"
+combined = slot1 == "NONE" and slot2 == "NONE" ? "NEWS none" : slot1 != "NONE" and slot2 != "NONE" ? "NEWS " + slot1 + " | " + slot2 : "NEWS " + (slot1 != "NONE" ? slot1 : slot2)
+
+combined
